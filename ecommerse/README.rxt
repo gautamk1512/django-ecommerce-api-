@@ -1,0 +1,15 @@
+1.This code defines a ProductViewSet class that inherits from viewsets.ModelViewSet of Django's REST framework. It allows CRUD (create, read, update, delete) operations for the Product model through its API endpoints.
+
+2.The queryset attribute defines the set of records that this viewset will operate on. In this case, it is set to all the records of the Product model.
+
+3.The serializer_class attribute specifies the serializer that will be used for the Product model.
+
+4.The create method is called when a new product is added via a POST request. It creates a new serializer with the request data, checks whether the data is valid, saves the serializer instance, and returns a 201 status code with the serialized data.
+
+5.The retrieve method is called when a product is requested via a GET request with the ID of the product in the URL. It gets the instance of the requested product, serializes it and returns the serialized data.
+
+6.The update method is called when a product is updated via a PUT request with the ID of the product in the URL. It gets the instance of the product, creates a new serializer with the request data, checks whether the data is valid, saves the serializer instance, and returns the serialized data.
+
+7.The destroy method is called when a product is deleted via a DELETE request with the ID of the product in the URL. It gets the instance of the product, deletes it, and returns a 204 status code.
+
+8.Overall, this code implements a RESTful API for the Product model with all the necessary CRUD operations. The code is well structured and easy to understand.
